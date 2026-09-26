@@ -1,0 +1,16 @@
+services:
+  gamegraph:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: gamegraph:latest
+    container_name: gamegraph
+    # JSON request on stdin, analysis on stdout; rejection -> exit code 2.
+    # Examples:
+    #   cat examples/example.json | docker compose run --rm -T gamegraph --pretty
+    #   docker compose run --rm gamegraph --pretty examples/example.json
+    stdin_open: true
+    tty: false
+    volumes:
+      - ./:/workspace:ro
+    working_dir: /workspace
