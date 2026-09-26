@@ -1,0 +1,11 @@
+{
+  "states": ["q", "x", "y", "z", "w", "t"],
+  "edges": [
+    {"from": "q", "to": "x"},
+    {"from": "x", "to": "y"},
+    {"from": "y", "to": "z"},
+    {"from": "z", "to": "y"},
+    {"from": "w", "to": "t"}
+  ],
+  "queries": ["q", "w", "t"]
+}

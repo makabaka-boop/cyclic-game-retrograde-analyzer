@@ -1,3 +1,13 @@
+Metadata-Version: 2.4
+Name: gamegraph
+Version: 1.0.0
+Summary: Retrograde WIN/LOSE/DRAW analyzer for finite directed game graphs
+License: MIT
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+Requires-Dist: pytest>=8; extra == "dev"
+
 # gamegraph — 有限状态对弈图逆向分析器
 
 对一个有限有向博弈图的每个状态判定 **WIN / LOSE / DRAW**，并给出可机器校验的见证。

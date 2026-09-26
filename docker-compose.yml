@@ -1,0 +1,12 @@
+# Finite directed game-graph analyzer.
+#
+#   docker compose build
+#   docker compose run --rm -T gamegraph < examples/draw.json
+#   docker compose run --rm --entrypoint pytest gamegraph -q
+services:
+  gamegraph:
+    build: .
+    image: gamegraph:latest
+    # Reads the JSON document from stdin, writes the JSON report to stdout.
+    stdin_open: true
+    tty: false
